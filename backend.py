@@ -161,9 +161,9 @@ async def predict_image(file: UploadFile = File(...)):
 # BackgroundTask をインポート
 from starlette.background import BackgroundTask
 
-if __name__ == "__main__":
-    import uvicorn
-    print("FastAPIサーバーを起動します (http://127.0.0.1:8000)")
-    # Uvicornサーバーを起動
-    # reload=True は開発時に便利だが、本番環境では False にする
-    uvicorn.run("backend:app", host="0.0.0.0", port=8000, reload=True)
+# if __name__ == "__main__":
+#     import uvicorn
+#     print("FastAPIサーバーを起動します (http://127.0.0.1:8000)")
+#     # Uvicornサーバーを起動
+#     # reload=True は開発時に便利だが、本番環境では False にする
+#     uvicorn.run("backend:app", host="0.0.0.0", port=8000, reload=True)
