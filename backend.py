@@ -9,7 +9,7 @@ import sys # sys をインポート
 
 # --- 設定 ---
 WEIGHTS_PATH = 'yolov8n.pt'
-CONF_THRESHOLD = 0.1
+CONF_THRESHOLD = 0.5
 TEMP_UPLOAD_DIR = "temp_uploads"
 TEMP_OUTPUT_DIR = "temp_outputs"
 os.makedirs(TEMP_UPLOAD_DIR, exist_ok=True)
