@@ -4,7 +4,7 @@ from PIL import Image
 import io
 
 # FastAPIのエンドポイント
-API_ENDPOINT = "http://127.0.0.1:8000/predict/"
+API_ENDPOINT = "https://yolov8-qjyc.onrender.com"
 
 st.title("物体検出アプリ")
 
