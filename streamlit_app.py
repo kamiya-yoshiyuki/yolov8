@@ -27,7 +27,7 @@ if uploaded_file is not None:
 
                 # 結果画像を表示
                 result_image = Image.open(io.BytesIO(response.content))
-                st.image(result_image, caption="物体検出の結果", use_column_width=True)
+                st.image(result_image, caption="物体検出の結果", use_container_width=True)
             except requests.exceptions.RequestException as e:
                 st.error(f"APIリクエストエラー: {e}")
             except Exception as e:

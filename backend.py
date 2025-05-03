@@ -152,7 +152,9 @@ async def predict_image(file: UploadFile = File(...)):
     # ここでファイルを返した後、削除するコールバックを設定する
     try:
         # FileResponse に background task を設定して、レスポンス送信後にファイルを削除する
-        return FileResponse(result_image_path, media_type=f"image/{file_ext.lstrip('.')}", background=BackgroundTask(os.remove, result_image_path))
+        return FileResponse(result_image_path, media_type=f"image/{file_ext.lstrip('.')}", 
+                            #background=BackgroundTask(os.remove, result_image_path))
+        )
     except Exception as e:
         print(f"エラー: 結果ファイルのレスポンス作成中にエラー: {e}", file=sys.stderr)
         # 結果ファイルが既に存在しない場合なども考慮
